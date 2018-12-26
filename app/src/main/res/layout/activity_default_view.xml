@@ -10,105 +10,57 @@
         android:id="@+id/txtViewPlayerSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="Search a Player"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/txtPlayerName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Player Name"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/txtViewPlayerSearch"
-        app:layout_constraintTop_toBottomOf="@+id/txtViewPlayerSearch" />
-
     <Button
-        android:id="@+id/btnSearchPlayerName"
+        android:id="@+id/btnSearchPlayer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:text="Search"
-        app:layout_constraintStart_toEndOf="@+id/txtPlayerName"
-        app:layout_constraintTop_toTopOf="@+id/txtPlayerName" />
-
-    <EditText
-        android:id="@+id/txtPlayerID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Player ID"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/txtViewPlayerSearch"
-        app:layout_constraintTop_toBottomOf="@+id/txtPlayerName" />
-
-    <Button
-        android:id="@+id/btnSearchPlayerId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:text="Search"
-        app:layout_constraintStart_toEndOf="@+id/txtPlayerID"
-        app:layout_constraintTop_toTopOf="@+id/txtPlayerID" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Player Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewPlayerSearch" />
 
     <TextView
         android:id="@+id/txtViewTournamentSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="Search a Tournament"
-        app:layout_constraintStart_toStartOf="@+id/txtViewPlayerSearch"
-        app:layout_constraintTop_toBottomOf="@+id/txtPlayerName" />
-
-    <EditText
-        android:id="@+id/txtTournamentName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Tournament Name"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/txtViewTournamentSearch"
-        app:layout_constraintTop_toBottomOf="@+id/txtViewTournamentSearch" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSearchPlayer" />
 
     <Button
-        android:id="@+id/btnSearchTournamentName"
+        android:id="@+id/btnSearchTournament"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:text="Search"
-        app:layout_constraintStart_toEndOf="@+id/txtTournamentName"
-        app:layout_constraintTop_toTopOf="@+id/txtTournamentName" />
-
-    <EditText
-        android:id="@+id/txtTournamentRegion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Tournament Region"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/txtViewTournamentSearch"
-        app:layout_constraintTop_toBottomOf="@+id/txtTournamentName" />
-
-    <Button
-        android:id="@+id/btnSearchTournamentRegion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:text="Search"
-        app:layout_constraintStart_toEndOf="@+id/txtTournamentRegion"
-        app:layout_constraintTop_toTopOf="@+id/txtTournamentRegion" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Tournament Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewTournamentSearch" />
 
     <Button
         android:id="@+id/btnShowAllPlayers"
@@ -118,7 +70,22 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="8dp"
+        android:text="Show All Players"
+        app:layout_constraintBottom_toTopOf="@+id/btnShowAllTournaments"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnShowAllTournaments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:text="Show All Players"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
