@@ -8,16 +8,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.aciko11.tennistournaments.Classes.DataStructure;
+
 public class searchPlayer extends AppCompatActivity {
 
     Button btnSearchPlayer;
     TextView txtViewFirstName, txtViewLastName, txtViewPlayerId;
     Context context;
 
-    String fieldKey[], fieldValueKey[], numberOfFieldsKey = "numberOfFields";
-    String firstName, lastName, playerId, numberOfFields = "3";
     String url = "https://theaciko.000webhostapp.com/TournamentsApi/searchPlayer.php";
     String packageName = "com.example.aciko11.tennistournaments.";
+    String dataNames[] = {"firstName", "lastName", "id"};
+    String dataValues[];
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +31,7 @@ public class searchPlayer extends AppCompatActivity {
         txtViewLastName = findViewById(R.id.txtLastName);
         txtViewPlayerId = findViewById(R.id.txtID);
 
-
+        dataValues = new String[3];
 
 
         context = this;
@@ -38,42 +41,23 @@ public class searchPlayer extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                firstName = txtViewFirstName.getText().toString();
-                if(firstName == "")
-                    firstName = "NULL";
-                lastName = txtViewFirstName.getText().toString();
-                if(lastName == "")
-                    lastName = "NULL";
-                playerId = txtViewPlayerId.getText().toString();
-                if(playerId == "")
-                    playerId = "NULL";
+                dataValues[0] = txtViewFirstName.getText().toString();
+                dataValues[1] = txtViewLastName.getText().toString();
+                dataValues[2] = txtViewPlayerId.getText().toString();
 
                 Intent intent = new Intent(context, ResultShow.class);
 
-                //sending data names
-                fieldKey = new String[Integer.parseInt(numberOfFields)];
-                for (int i = 0; i < fieldKey.length; i++){
-                    fieldKey[i] = packageName + "field" + i;
+                DataStructure data = new DataStructure(3);
+
+                for (int i = 0; i < 3; i++){
+                    data.setName(dataNames[i], i);
+                    data.setValue(dataValues[i], i);
                 }
+                data.setJsonArrayName("Players");
+                data.setIsInsert(false);
 
-                intent.putExtra(fieldKey[0], "firstName");
-                intent.putExtra(fieldKey[1], "lastName");
-                intent.putExtra(fieldKey[2], "id");
-
-                //sending the data
-                fieldValueKey = new String[Integer.parseInt(numberOfFields)];
-                for(int i = 0; i < fieldValueKey.length; i++){
-                    fieldValueKey[i] = packageName + "fieldValue" + i;
-                }
-
-                intent.putExtra(fieldValueKey[0], firstName);
-                intent.putExtra(fieldValueKey[1], lastName);
-                intent.putExtra(fieldValueKey[2], playerId);
-                intent.putExtra(packageName + numberOfFieldsKey, numberOfFields);
+                intent.putExtra(packageName + "data", data);
                 intent.putExtra(packageName + "url", url);
-
-
-                //mi serve il nome del campo (firstname, lastname, id) e il valore
 
                 startActivity(intent);
             }

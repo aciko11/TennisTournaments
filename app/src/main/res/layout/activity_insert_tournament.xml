@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InsertTournament">
+
+    <TextView
+        android:id="@+id/txtViewJudgeTournamentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="56dp"
+        android:text="Tournament Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewJudgeTournamentRegion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Tournament Region"
+        app:layout_constraintStart_toStartOf="@+id/txtJudgeTournamentName"
+        app:layout_constraintTop_toBottomOf="@+id/txtJudgeTournamentName" />
+
+    <TextView
+        android:id="@+id/txtViewJudgeTournamentCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Tournament City"
+        app:layout_constraintStart_toStartOf="@+id/txtJudgeTournamentRegion"
+        app:layout_constraintTop_toBottomOf="@+id/txtJudgeTournamentRegion" />
+
+    <EditText
+        android:id="@+id/txtJudgeTournamentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Tournament Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/txtViewJudgeTournamentName"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewJudgeTournamentName" />
+
+    <EditText
+        android:id="@+id/txtJudgeTournamentRegion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Tournament Region"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/txtViewJudgeTournamentRegion"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewJudgeTournamentRegion" />
+
+    <EditText
+        android:id="@+id/txtJudgeTournamentCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Tournament City"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/txtViewJudgeTournamentCity"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewJudgeTournamentCity" />
+
+    <Button
+        android:id="@+id/btnJudgeInsertTournament"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="82dp"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="64dp"
+        android:text="Insert"
+        app:layout_constraintStart_toStartOf="@+id/txtJudgeTournamentCity"
+        app:layout_constraintTop_toBottomOf="@+id/txtJudgeTournamentCity" />
+
+    <Button
+        android:id="@+id/btnAutoLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Auto"
+        app:layout_constraintStart_toEndOf="@+id/txtJudgeTournamentCity"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewJudgeTournamentCity" />
+
+    <TextView
+        android:id="@+id/txtViewTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/txtJudgeTournamentName"
+        tools:layout_editor_absoluteX="138dp" />
+
+</android.support.constraint.ConstraintLayout>

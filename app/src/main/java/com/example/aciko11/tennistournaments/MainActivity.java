@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnPlayers;
+    Button btnPlayers, btnJudges;
 
     //public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
@@ -21,18 +21,26 @@ public class MainActivity extends AppCompatActivity {
 
         //variables instantiation
         btnPlayers = (Button) findViewById(R.id.btnPlayers);
+        btnJudges = findViewById(R.id.btnJudges);
         final Context context = this;
 
         //click listener for the show button
         btnPlayers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 //switching activities, in this case to the DefaultView
                 Intent intent = new Intent(context, DefaultView.class);
                 startActivity(intent);
             }
 
+        });
+
+        btnJudges.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, JudgeLogin.class);
+                startActivity(intent);
+            }
         });
     }
 }

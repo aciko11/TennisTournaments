@@ -7,74 +7,116 @@
     tools:context=".SearchTournament">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtViewTournamentName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="26dp" />
+        android:layout_marginTop="128dp"
+        android:text="Nome Torneo"
+        app:layout_constraintStart_toStartOf="@+id/txtTournamentName"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtViewJudgeTournamentRegion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="115dp" />
+        android:layout_marginTop="8dp"
+        android:text="Regione"
+        app:layout_constraintStart_toStartOf="@+id/txtTournamentRegion"
+        app:layout_constraintTop_toBottomOf="@+id/txtTournamentName" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txtViewJudgeTournamentCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="250dp" />
+        android:layout_marginTop="8dp"
+        android:text="Città"
+        app:layout_constraintStart_toStartOf="@+id/txtTournamentCity"
+        app:layout_constraintTop_toBottomOf="@+id/txtTournamentRegion" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/txtTournamentName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:ems="10"
+        android:hint="Nome torneo"
         android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="55dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewTournamentName" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/txtTournamentRegion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:ems="10"
+        android:hint="Regione"
         android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="154dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewJudgeTournamentRegion" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/txtTournamentCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:ems="10"
+        android:hint="Città"
         android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="295dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewJudgeTournamentCity" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="388dp" />
+        android:layout_marginTop="8dp"
+        android:text="Id"
+        app:layout_constraintStart_toStartOf="@+id/txtTournamentId"
+        app:layout_constraintTop_toBottomOf="@+id/txtTournamentCity" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/txtTournamentId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:ems="10"
+        android:hint="Id torneo"
         android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="457dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/btnSearchTournament"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTournamentId" />
 </android.support.constraint.ConstraintLayout>

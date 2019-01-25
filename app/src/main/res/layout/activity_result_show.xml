@@ -33,28 +33,11 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button1">
+            app:layout_constraintStart_toStartOf="parent">
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_weight="0.3"
-                    android:padding="4dp"
-                    android:text="Colonna1" />
-
-                <TextView
-                    android:layout_weight="1"
-                    android:padding="4dp"
-                    android:text="Colonna2" />
-
-                <TextView
-                    android:layout_weight="1"
-                    android:padding="4dp"
-                    android:text="Colonna3" />
-            </TableRow>
+                android:layout_height="match_parent"/>
         </TableLayout>
     </ScrollView>
 
